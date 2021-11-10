@@ -1,0 +1,223 @@
+body {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #000;
+  }
+  
+  h1 {
+    font-size: 4em;
+    color: #fff;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    line-height: 8.7rem;
+  }
+
+  /* Styles for typing animation  */
+
+  .var-highlight {
+    font-size: 3em;
+    color: #fff;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+  }
+  
+  /* .string-highlight {
+    color: rgba(253, 149, 90, 0.8);
+  }
+   */
+
+  #typewriter {
+    line-height: 75px;
+    letter-spacing: -4px;
+    font-size: 30px;
+    margin: 0;
+
+  }
+  #typewriter:after {
+    font-size: 96px;
+    color: #28dde0;
+    content: "|";
+    -webkit-animation: blink 500ms linear infinite alternate;
+            animation: blink 500ms linear infinite alternate;
+  }
+  
+  @-webkit-keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+
+/* This Styling is for the Navigation  */
+/* nav toggle */
+.nav-toggle {
+  cursor: pointer;
+  height: 2rem;
+  left: 2rem;
+  position: fixed;
+  top: 2rem;
+  width: 3.6rem;
+  z-index: 2;
+}
+.nav-toggle:hover {
+  opacity: 0.8;
+}
+.nav-toggle .nav-toggle-bar,
+.nav-toggle .nav-toggle-bar::after,
+.nav-toggle .nav-toggle-bar::before {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: white;
+  content: "";
+  height: 0.4rem;
+  transition: all 0.5s;
+  width: 100%;
+}
+.nav-toggle .nav-toggle-bar {
+  margin-top: 0;
+}
+.nav-toggle .nav-toggle-bar::after {
+  margin-top: 0.8rem;
+}
+.nav-toggle .nav-toggle-bar::before {
+  margin-top: -0.8rem;
+}
+.nav-toggle.expanded .nav-toggle-bar {
+  background: transparent;
+}
+.nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before {
+  background: white;
+  margin-top: 0;
+}
+.nav-toggle.expanded .nav-toggle-bar::after {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.nav-toggle.expanded .nav-toggle-bar::before {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* nav */
+.nav {
+  background: #28dde0;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 2rem;
+  height: 100vh;
+  left: -20rem;
+  padding: 6rem 2rem 2rem 2rem;
+  position: fixed;
+  top: 0;
+  transition: left 0.5s;
+  width: 20rem;
+  z-index: 1;
+}
+.nav.expanded {
+  left: 0;
+}
+.nav ul {
+  list-style: none;
+  margin: auto 0;
+  padding: 0;
+}
+
+
+.divPosition {
+  left: 90px;
+  position: absolute;
+  top: 240px;
+}
+
+.tags {
+  font-family: 'Yellowtail', cursive;
+  color: #515152;
+  position: absolute;
+  bottom: 0;
+  left: 10rem;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.top-tags {
+  bottom: auto;
+  top: 1rem;
+}
+
+.bottom-tags {
+  bottom: 14rem;
+  top: auto;
+  left: 200px;
+  font-size: 20px;
+}
+
+.top-tags:after {
+  content: '<body>';
+  font-style: italic;
+  font-family: 'Yellowtail', cursive;
+  color: #515152;
+  font-size: 20px;
+  position: absolute;
+  margin-left: 2rem;
+}
+
+.divPosition:before {
+  font-style: italic;
+  font-family: 'Yellowtail', cursive;
+  content: '<h1>';
+  color: #515152;
+  font-size: 20px;
+  position: absolute;
+  margin-top: -38px;
+  left: 106px;
+}
+
+.gray-text {
+  font-size: 1.6rem;
+  letter-spacing: 4px;
+  margin-top: 3rem;
+  display: block;
+  color: #8d8d8d;
+}
+
+.text-zone p:first-of-type:before {
+  content: '<p>';
+  font-family: 'La Belle Aurore',cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  margin-top: -2rem;
+  left: -2rem;
+}
+
+.text-zone p:last-of-type:after {
+  content: '<p/>';
+  font-family: 'La Belle Aurore',cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left: -2rem;
+  bottom: -3rem;
+}
