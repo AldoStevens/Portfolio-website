@@ -1,8 +1,8 @@
 body {
     /* display: flex; */
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    /* align-items: center;
+    justify-content: center; */
+    /* height: 100vh; */
     background: #000;
   }
   
@@ -69,7 +69,7 @@ body {
 .nav-toggle {
   cursor: pointer;
   height: 2rem;
-  left: 2rem;
+  right: 2rem;
   position: fixed;
   top: 2rem;
   width: 3.6rem;
@@ -127,16 +127,16 @@ body {
   display: flex;
   font-size: 2rem;
   height: 100vh;
-  left: -20rem;
+  right: -20rem;
   padding: 6rem 2rem 2rem 2rem;
   position: fixed;
   top: 0;
-  transition: left 0.5s;
+  transition: right 0.5s;
   width: 20rem;
   z-index: 1;
 }
 .nav.expanded {
-  left: 0;
+  right: 0;
 }
 .nav ul {
   list-style: none;
@@ -146,9 +146,9 @@ body {
 
 
 .divPosition {
-  left: 90px;
+  left: -50px;
   position: absolute;
-  top: 240px;
+  top: 150px;
 }
 
 .tags {
@@ -156,7 +156,7 @@ body {
   color: #515152;
   position: absolute;
   bottom: 0;
-  left: 10rem;
+  left: 0;
   font-style: italic;
   font-size: 20px;
 }
@@ -167,10 +167,13 @@ body {
 }
 
 .bottom-tags {
-  bottom: 14rem;
+  position: absolute;
+  font-family: 'Yellowtail', cursive;
+  bottom: 20rem;
   top: auto;
-  left: 200px;
+  left: 70px;
   font-size: 20px;
+  color: #515152
 }
 
 .top-tags:after {
@@ -191,20 +194,21 @@ body {
   font-size: 20px;
   position: absolute;
   margin-top: -38px;
-  left: 106px;
+  left: 120px;
 }
 
 .gray-text {
-  font-size: 1.6rem;
+  font-weight: 500;
+  font-size: 16px;
   letter-spacing: 4px;
   margin-top: 3rem;
   display: block;
   color: #8d8d8d;
 }
 
-.text-zone p:first-of-type:before {
+.secPosition p:first-of-type:before {
   content: '<p>';
-  font-family: 'La Belle Aurore',cursive;
+  font-family: 'Yellowtail', cursive;
   color: #515152;
   font-size: 18px;
   position: absolute;
@@ -212,12 +216,190 @@ body {
   left: -2rem;
 }
 
-.text-zone p:last-of-type:after {
+.secPosition p:last-of-type:after {
   content: '<p/>';
-  font-family: 'La Belle Aurore',cursive;
+  font-family: 'Yellowtail', cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left: -2rem;
+  bottom: -1rem;
+}
+
+
+.flat-button {
+  color: #08fdd8;
+  font-size: 14px;
+  letter-spacing: 4px;
+  font-family: "Open Sans",sans-serif;
+  text-decoration: none;
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  max-width: 220px;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+}
+
+.secPosition {
+  left: 100px;
+  position: absolute;
+  bottom: 230px;
+}
+
+.btnPosition {
+  left: 100px;
+  position: absolute;
+  bottom: 100px;
+}
+
+.btnPosition a:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+
+#btn{
+  position: relative;
+  overflow: hidden;
+  transition: all .5s;
+  border: 2px solid #08fdd8;
+  padding: 0px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#btn:before{
+  width: 100%;
+  height: 100%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top:  -100%;
+  left: -100%;
+  background: #08fdd8;
+  transition: all .5s;
+  z-index: -1;
+}
+
+#btn:hover{
+  color: white;
+}
+
+#btn:hover:before{      
+    top: 0;
+    left: 0;
+}
+
+@media (max-width: 767.98px) { 
+
+  .top-tags {
+    top: 7rem;
+  }
+
+  .tags {
+    left: 1rem;
+  }
+
+  .bottom-tags {
+    bottom: 25rem;
+    left: 69px;
+  }
+
+  .divPosition {
+    left: -43px;
+    top: 220px;
+  }
+
+  .secPosition {
+    left: 100px;
+    bottom: 314px;
+  }
+
+  .btnPosition {
+    left: 100px;
+    bottom: 160px;
+  }
+
+  #typewriter {
+    line-height: 35px;
+    letter-spacing: 0px;
+    font-size: 13px;
+  }
+
+  #typewriter:after {
+    font-size: 40px;
+  }
+}
+
+.aboutSection {
+  position: absolute;
+  top: 120vh;
+  left: 10vh;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  color: #08fdd8;
+  font-weight: 700;
+  margin-top: 0;
+  position: relative;
+  margin-bottom: 40px;
+  left: 20px;
+  font-size: 40px;
+  line-height: 6.7rem;
+}
+
+.abtHeader::before {
+  font-weight: 200;
+  content: '<h2>';
+  font-family: 'Yellowtail', cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left: -2rem;
+  top: -3rem;
+}
+
+.abtHeader::after {
+  font-weight: 200;
+  content: '</h2>';
+  font-family: 'Yellowtail', cursive;
   color: #515152;
   font-size: 18px;
   position: absolute;
   left: -2rem;
   bottom: -3rem;
 }
+
+.aboutSection p:first-of-type:before {
+  content: '<p>';
+  font-family: 'Yellowtail', cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  margin-top: -2rem;
+  left: -1rem;
+}
+
+.aboutSection p:last-of-type:after {
+  content: '<p/>';
+  font-family: 'Yellowtail', cursive;
+  color: #515152;
+  font-size: 18px;
+  position: absolute;
+  left: -1rem;
+  bottom: -1rem;
+}
+
+
+@media (max-width: 767.98px) { 
+  .aboutSection {
+    top: 100vh;
+  }
+}
+
+
+
