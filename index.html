@@ -38,9 +38,17 @@
 
   
 
-    <section>
-      <div class="text-zone">
-        <span class="tags top-tags"> &lt;html&gt; <br> </span>
+    <section style="height: 100vh;">
+     
+      <span class="tags top-tags"> &lt;html&gt; <br> </span>
+
+      <span class="tags tagSpacing"> &lt;body&gt; <br> </span>
+
+      <div class="container">
+       <div class="text-zone">
+    
+
+        <span class="tags"> &lt;h1&gt; <br> </span>
 
         <div class="divPosition">
           <pre id="typewriter">
@@ -49,54 +57,123 @@
             <span class="var-highlight">web developer</span></pre> 
   
         </div>
-        <span class=" bottom-tags"> &lt;/h1&gt; <br> </span>
+        <span class="tags"> &lt;/h1&gt; <br> </span>
       </div>
-
-      <div class="secPosition">
-        <p class="gray-text">Front End Developer /</p>
-      </div>
-
-      <div class="btnPosition">
-        <a id="btn" href="http://" class="flat-button btnStyle">
-          Contact Me
-        </a>
-      </div>
-    </section>
-
-    <!-- Exampel Site  -->
-    <!-- https://jacekjeznach.com/  -->
-
-    <section class="aboutSection">
-
-      <div>
-        <h2 class="abtHeader">
-          About Me
-        </h2>
-      </div>
-
-
-
-        <div class="imgOverlay">
-          <img src="./images/Aldo.jpeg" class="img-fluid " alt="My Image" width="400" height="350">
+  
+        <div class="row">
+          <div class="col-sm-6">  
+            <div class="secPosition">
+              <span class="tags"> &lt;p&gt; <br> </span>
+              <p class="gray-text">Front End Developer /</p>
+              <span class="tags"> &lt;p&gt; <br> </span>
+            </div>
+      
+            <div class="btnPosition">
+              <a id="btn" href="http://" class="flat-button btnStyle">
+                Contact Me
+              </a>
+            </div>
+          </div>
         </div>
-
-        <div class="">
-          <p class="gray-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi labore animi aut illo, nulla ducimus molestiae dolore nihil sequi praesentium facere alias tempora ullam possimus tempore odit. Placeat, reiciendis adipisci?
-          </p>
-    
-          <p class="gray-text">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id optio cum dignissimos minima, sapiente quidem numquam laboriosam dolorem modi fugit voluptatum reprehenderit quisquam eius ab pariatur vitae impedit! Quod, mollitia!
-          </p>
-    
-          <p class="gray-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, fuga! Dicta minima non ad. Tempora, ipsam? Iste cum et quisquam maxime consequatur esse consequuntur dicta eaque, qui exercitationem in excepturi.
-          </p>
-        </div>
+      </div>
 
       
     </section>
-    
+
+    <section class="aboutSection">
+      <div class="container">
+
+        <div>
+          <span class="tags"> &lt;h2&gt; <br> </span>
+          <h2 class="abtHeader">
+            About Me
+          </h2>
+          <span class="tags"> &lt;h2&gt; <br> </span>
+        </div>
+      
+  
+        <div class="row">
+          <div class="col-sm-6" style="margin: 85px 0px;">  
+            <img src="./images/Aldo.jpeg" class="img-fluid " alt="My Image" width="400" height="350">
+          </div>
+  
+          <div class="col-sm-6">
+            <span class="tags"> &lt;p&gt; <br> </span>
+            <p class="gray-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi labore animi aut illo, nulla ducimus molestiae dolore nihil sequi praesentium facere alias tempora ullam possimus tempore odit. Placeat, reiciendis adipisci?
+            </p>
+      
+            <p class="gray-text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id optio cum dignissimos minima, sapiente quidem numquam laboriosam dolorem modi fugit voluptatum reprehenderit quisquam eius ab pariatur vitae impedit! Quod, mollitia!
+            </p>
+      
+            <p class="gray-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, fuga! Dicta minima non ad. Tempora, ipsam? Iste cum et quisquam maxime consequatur esse consequuntur dicta eaque, qui exercitationem in excepturi.
+            </p>
+            <span class="tags"> &lt;p&gt; <br> </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+
+      <div class="container">
+        <div>
+          <span class="tags"> &lt;h2&gt; <br> </span>
+          <h2 class="abtHeader">
+            Contact Me 
+          </h2>
+          <span class="tags"> &lt;h2&gt; <br> </span>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <form>
+              <span class="tags"> &lt;form&gt; <br> </span>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input type="text" name="firstname" id="firstname" placeholder="Full name" required/>
+                  <p class="formsg">Full name must be alphanumeric & 5-30 charaters </p>
+                </div>
+      
+                <div class="col-sm-6">
+                  <input type="text" name="email" id="email" placeholder="E-mail address"/>
+                  <p class="formsg">Email must be a valid address, eg vacine@sanva.com</p>
+                  <!-- <input type="text" name="surname" id="surname" placeholder="Surname" required />
+                  <p class="formsg">Surname must be alphanumeric & 5-20 charaters </p> -->
+                </div>
+              </div>
+      
+              <div class="col-sm-12">
+                <input type="text" name="subject" id="subject" placeholder="Subject" required/>
+                <p class="formsg">Subject must be alphanumeric & 5-30 charaters </p>
+              </div>
+              
+              <div class="col-sm-12">
+                <textarea name="message" id="message" placeholder="Message" required ></textarea>
+              </div>
+      
+            
+      
+              <div class="col">
+                <input type="submit" id="submit-btn" value="Submit" />
+      
+              </div>
+              <span class="tags"> &lt;/form&gt; <br> </span>
+           </form>
+          </div>
+
+          <div class="col-sm-6">
+
+          </div>
+        </div>
+  
+        
+
+    </section>
+
+   
    
     
    

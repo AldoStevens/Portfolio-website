@@ -92,3 +92,51 @@ var typer = document.getElementById('typewriter');
 typewriter = setupTypewriter(typewriter);
 
 typewriter.type();
+
+// validation script
+
+const inputs= document.querySelectorAll("input");
+
+ const patterns = {
+    firstname:/^[a-z]{3,30}$/i,
+    subject :/^[a-z]{3,20}$/i,
+    email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,9})(\.[a-z]{2,9})?$/,
+    message: /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-,])$/,
+    
+ };
+
+
+ //validation finction
+function validate(field, regex){
+if(regex.test(field.value)){
+    field.className = "valid";
+    } else {
+    field.className ="invalid";
+    }
+}
+
+inputs.forEach((input) => {
+    input.addEventListener("keyup",(e) => {
+
+
+        validate(e.target, patterns[e.target.attributes.name.value])
+    
+});
+});
+
+
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  const uluru = { lat: -25.344, lng: 131.036 };
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: uluru,
+  });
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
+}

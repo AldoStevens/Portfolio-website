@@ -146,11 +146,11 @@ body {
 
 
 .divPosition {
-  left: -50px;
-  position: absolute;
-  top: 150px;
+  height: 43vh;
 }
 
+
+/* 
 .tags {
   font-family: 'Yellowtail', cursive;
   color: #515152;
@@ -159,14 +159,14 @@ body {
   left: 0;
   font-style: italic;
   font-size: 20px;
-}
+} */
 
 .top-tags {
   bottom: auto;
   top: 1rem;
 }
 
-.bottom-tags {
+/* .bottom-tags {
   position: absolute;
   font-family: 'Yellowtail', cursive;
   bottom: 20rem;
@@ -195,6 +195,24 @@ body {
   position: absolute;
   margin-top: -38px;
   left: 120px;
+} */
+
+.tags {
+  font-family: 'Yellowtail', cursive;
+  color: #515152;
+  /* position: absolute; */
+  bottom: 0;
+  left: 0;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.tagSpacing {
+  margin-left: 35px;
+}
+
+.tagSpacingLarg {
+  margin-left: 100px;
 }
 
 .gray-text {
@@ -206,7 +224,7 @@ body {
   color: #8d8d8d;
 }
 
-.secPosition p:first-of-type:before {
+/* .secPosition p:first-of-type:before {
   content: '<p>';
   font-family: 'Yellowtail', cursive;
   color: #515152;
@@ -225,7 +243,7 @@ body {
   left: -2rem;
   bottom: -1rem;
 }
-
+ */
 
 .flat-button {
   color: #08fdd8;
@@ -243,7 +261,7 @@ body {
   text-align: center;
 }
 
-.secPosition {
+/* .secPosition {
   left: 100px;
   position: absolute;
   bottom: 230px;
@@ -253,7 +271,7 @@ body {
   left: 100px;
   position: absolute;
   bottom: 100px;
-}
+} */
 
 .btnPosition a:hover {
   color: #0056b3;
@@ -334,13 +352,21 @@ body {
   }
 }
 
-.aboutSection {
+.abtHeader {
+  font-family: 'Open Sans', sans-serif;
+  color: #08fdd8;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 6.7rem;
+}
+
+/* .aboutSection {
   position: absolute;
   top: 120vh;
   left: 10vh;
-}
+} */
 
-h2 {
+/* h2 {
   font-family: 'Open Sans', sans-serif;
   color: #08fdd8;
   font-weight: 700;
@@ -350,9 +376,9 @@ h2 {
   left: 20px;
   font-size: 40px;
   line-height: 6.7rem;
-}
+} */
 
-.abtHeader::before {
+/* .abtHeader::before {
   font-weight: 200;
   content: '<h2>';
   font-family: 'Yellowtail', cursive;
@@ -361,9 +387,9 @@ h2 {
   position: absolute;
   left: -2rem;
   top: -3rem;
-}
+} */
 
-.abtHeader::after {
+/* .abtHeader::after {
   font-weight: 200;
   content: '</h2>';
   font-family: 'Yellowtail', cursive;
@@ -372,9 +398,9 @@ h2 {
   position: absolute;
   left: -2rem;
   bottom: -3rem;
-}
+} */
 
-.aboutSection p:first-of-type:before {
+/* .aboutSection p:first-of-type:before {
   content: '<p>';
   font-family: 'Yellowtail', cursive;
   color: #515152;
@@ -392,13 +418,240 @@ h2 {
   position: absolute;
   left: -1rem;
   bottom: -1rem;
+} */
+
+
+/* Flexbox layout */
+/* .flex-container {
+  display: flex;
 }
+
+.flex-child {
+  flex: 1;
+  border: 2px solid yellow;
+}  
+
+.flex-child:first-child {
+  margin-right: 20px;
+}  */
+
 
 
 @media (max-width: 767.98px) { 
   .aboutSection {
     top: 100vh;
   }
+}
+
+
+/* Conatact form popup on home page  */
+    
+:root{
+  --succes-color: #2ecc71;;
+  --error-color: #e74c3c;
+}
+
+
+.form{
+  padding: 30px 40px;
+}
+
+.form-control{
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label{
+  color:#777;
+  display: block;
+  margin-bottom: 5px; 
+}
+
+.form-control input
+{
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;   
+}
+
+.form-control input:focus{
+  outline: 0;
+  border-color: #777;
+
+}
+
+.form-control.success input {
+  border-color: var(--succes-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);    
+}
+
+.form-control small{
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small{
+  visibility: visible;
+}
+.form button {
+  cursor: pointer;
+  background-color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  margin-top:20px;
+  width:100%;
+}
+
+.form-control{
+  border-radius:80px;
+  margin: 10px ;
+  border:20px;
+}
+.font-primary{
+  font-family: 'Kaushan Script', cursive;
+  color: #1687c9;
+  margin-bottom: -2.5rem;
+}
+.font-secondary{
+  font-family: 'Saira', sans-serif;
+}
+.form-area{
+  border:10px solid #fff;
+  border-radius: 30px;
+  background-color:#000
+}
+
+
+form input,
+textarea,
+select,
+option {
+  padding: 10px;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #FFF;
+  color: #FFF;
+  outline: none;
+}
+
+input#firstname {
+  width: 100%;
+  max-width: 460px;
+  margin: 20px;
+}
+
+input#subject {
+  width: 100%;
+  /* max-width: 460px;
+  margin: 20px; */
+}
+
+input#email {
+  width: 100%;
+  max-width: 460px;
+  margin: 20px;
+}
+
+textarea#message {
+  width: 100%;
+  /* max-width: 460px; */
+  /* margin: 20px; */
+}
+
+input#submit-btn {
+  margin: 20px;
+  width: 100px;
+  border: 2px solid #FFF !important;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  /* transition */
+  
+  transition: 0.25s ease-in-out 0s;
+  display: block;
+}
+
+input#submit-btn:hover {
+  cursor: pointer;
+  background: #FFF;
+  color: #000;
+  /* scale */
+  
+  transform: scale(1.25);
+}
+/* Placeholder style */
+
+::-webkit-input-placeholder {
+  color: #FFF;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: #FFF;
+  opacity: 1;
+}
+/* firefox 19+ */
+
+:-ms-input-placeholder {
+  color: #FFF;
+  opacity: 1;
+}
+/* ie */
+
+input:-moz-placeholder {
+  color: #FFF;
+  opacity: 1;
+}
+    
+/* validation form inputs for contacts */
+
+input.valid{
+  border-color: #06D85F; 
+}
+
+input.invalid{
+  border-color: #df0c13;
+}
+input + p{
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: left;
+  color: #df0c13;
+   opacity: 0;
+   margin: 0px 10px;
+   height: 0;
+}
+
+input.invalid + p{
+  opacity: 1;
+  height: auto;
+  margin: 20px;
+}
+.formsg{
+  left: 100px;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
 }
 
 
