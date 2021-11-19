@@ -655,4 +655,21 @@ input.invalid + p{
 }
 
 
+.bannerSection {
+  height: 100vh; 
+  position: absolute; 
+  top: 0;
+}
 
+@media (max-width: 767.98px) { 
+
+  .bannerSection {
+    position: relative;
+    top: 80px;
+  }
+
+  .particle {
+    display: none;
+  }
+  
+}
