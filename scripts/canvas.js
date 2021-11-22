@@ -6,6 +6,10 @@ site.document = $(document);
 site.Width = site.window.width();
 site.Height = site.window.height();
 
+// Hard coded Values for Width and Height
+// site.Width = 570;
+// site.Height = 458;
+
 var Background = function() {
 
 };
